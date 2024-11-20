@@ -6,7 +6,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'npm -v'
+                sh 'export https_proxy=http://127.0.0.1:7890'
+                sh 'npm install'
             }
         }
         stage('Test') {
